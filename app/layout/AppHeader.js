@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Navigator} from 'react-native';
+import {Navigator, View, Text} from 'react-native';
 
 import {
   Header,
@@ -14,7 +14,7 @@ import {
 export default class AppHeader extends Component {
 
   render() {
-    if (this.props.noBack) {
+    if (!this.props.back) {
       return (
         <Header>
           <Left/>
@@ -22,9 +22,6 @@ export default class AppHeader extends Component {
           <Title>{this.props.title}</Title>
           </Body>
           <Right>
-            <Button transparent>
-              <Icon name='menu'/>
-            </Button>
           </Right>
         </Header>
       );
@@ -40,9 +37,6 @@ export default class AppHeader extends Component {
           <Title>{this.props.title}</Title>
           </Body>
           <Right>
-            <Button transparent>
-              <Icon name='menu'/>
-            </Button>
           </Right>
         </Header>
       );

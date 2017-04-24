@@ -14,12 +14,12 @@ import Header from '../layout/AppHeader';
 import Footer from '../layout/AppFooter';
 
 
-export default class Medications extends Component {
+export default class Details extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      title: 'Medications',
+      title: 'Details',
       medications: null,
     };
   }
